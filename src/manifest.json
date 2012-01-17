@@ -5,8 +5,8 @@
     "run_at": "document_idle"
   }],
   "description": "过滤掉 google 结果页的 链接转发，身在天朝伤不起啊",
-  "name": "google search-filter",
-  "version": "0.0.1",
+  "name": "google search filter",
+  "version": "0.0.3",
   "homepage_url":"https://github.com/charsky/google-search-filter",
   "icons": { "128": "head128.png" }
 }
