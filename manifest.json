@@ -1,0 +1,11 @@
+{
+  "content_scripts": [{
+    "js": [ "fg.js" ],
+    "matches": [ "http://www.google.com.hk/*", "https://www.google.com/*" ],
+    "run_at": "document_idle"
+  }],
+  "description": "过滤google搜索结果url跳转",
+  "name": "filter google",
+  "version": "0.0.1",
+  "homepage_url":"http://charsky.github.com/"
+}
