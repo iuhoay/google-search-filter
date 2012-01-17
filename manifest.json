@@ -4,8 +4,9 @@
     "matches": [ "http://www.google.com.hk/*", "https://www.google.com/*" ],
     "run_at": "document_idle"
   }],
-  "description": "过滤google搜索结果url跳转",
-  "name": "filter google",
+  "description": "过滤掉 google 结果页的 链接转发，身在天朝伤不起啊",
+  "name": "google search-filter",
   "version": "0.0.1",
-  "homepage_url":"http://charsky.github.com/"
+  "homepage_url":"https://github.com/charsky/google-search-filter",
+  "icons": { "128": "head128.png" }
 }
