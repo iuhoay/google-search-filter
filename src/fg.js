@@ -1,4 +1,6 @@
 console.info("fg worked. http://charsky.github.com");
+console.info(location.href)
+if (/g.cn|google.cn/.test(location.href)) location.href="http://www.google.com.hk";
 var timeout = window.setInterval(function() {
   var ires = document.getElementById("ires");
   if (ires) {
