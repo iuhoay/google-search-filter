@@ -1,7 +1,12 @@
 {
   "content_scripts": [{
     "js": [ "fg.js" ],
-    "matches": [ "http://www.google.com.hk/*", "https://www.google.com/*", "http://www.google.cn/*" ],
+    "matches": [ 
+      "*://www.google.com.hk/*", 
+      "*://www.google.com/*", 
+      "*://www.google.cn/*", 
+      "*://plus.google.com/*" 
+    ],
     "run_at": "document_idle"
   }],
   "description": "过滤掉 google 结果页的 链接转发，身在天朝伤不起啊",
