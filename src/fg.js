@@ -1,5 +1,6 @@
-console.info("fg worked. http://charsky.github.com");
-// if (/g.cn|google.cn/.test(location.href)) location.href="http://www.google.com.hk";
+// CN 直接 跳转到 HK
+if ("http://www.google.cn/" === location.href) location.href="http://www.google.com.hk";
+
 var timeout = window.setInterval(function() {
   var ires = document.getElementById("ires");
   if (ires) {
