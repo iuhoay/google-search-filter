@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "description": "过滤掉 google 结果页的 链接转发，身在天朝伤不起啊",
   "browser_action": {
-    "default_icon": "head128.png"
+    "default_icon": "ico.png"
   },
   "permissions": [
     "*://www.google.com.hk/*",
