@@ -1,17 +1,28 @@
-// CN 直接 跳转到 HK
-if ("http://www.google.cn/" === location.href) location.href="http://www.google.com.hk";
+var current_href = location.href,
+    selector = "#ires a.l";
 
-var timeout = window.setInterval(function() {
-  var ires = document.getElementById("ires");
-  if (ires) {
-    var result_A = ires.getElementsByTagName("a");
-    if (result_A){
-      for (var i = 0; i <= result_A.length; i++) {
-        var tmp_A = result_A[i];
-        if (tmp_A && tmp_A.className && tmp_A.className.indexOf("l") >= 0) {
-          tmp_A.removeAttribute("onmousedown");
-        }
-      };
+// CN 直接 跳转到 HK
+if ("http://www.google.cn/" === current_href) location.href="http://www.google.com.hk";
+
+if (current_href.indexOf("/search?") > 0) {
+  filter();
+} else {
+  var timeout = window.setInterval(function() {
+    filter(timeout);
+  }, 999);
+}
+
+function filter(timed) {
+  var links = document.querySelectorAll(selector),
+      length = links.length;
+  if (length > 0) {
+    console.info("find " + length + " links");
+    for (var i = 0; i < length; i++) {
+      var link = links[i];
+      link.removeAttribute("onmousedown");
+      console.info((i + 1) + "/" + length + link.innerHTML);
     }
+    if (timed) window.clearInterval(timed);
+    console.info("OVER");
   }
-}, 999);
+}
