@@ -2,7 +2,7 @@ var current_href = location.href,
     selector = "#ires a.l";
 
 // CN 直接 跳转到 HK
-if ("http://www.google.cn/" === current_href) location.href="http://www.google.com.hk";
+"http://www.google.cn/" === current_href && (location.href = "http://www.google.com.hk");
 
 if (current_href.indexOf("/search?") > 0) {
   filter();
