@@ -15,14 +15,14 @@ if (current_href.indexOf("/search?") > 0) {
 function filter(timed) {
   var links = document.querySelectorAll(selector),
       length = links.length;
+  console.info("find " + length + " links");
   if (length > 0) {
-    console.info("find " + length + " links");
     for (var i = 0; i < length; i++) {
       var link = links[i];
       link.removeAttribute("onmousedown");
-      console.info((i + 1) + "/" + length + link.innerHTML);
+      console.info((i + 1) + "/" + length + ":" + link.innerText + ":" + link.href);
     }
-    if (timed) window.clearInterval(timed);
-    console.info("OVER");
   }
+  console.info("OVER");
+  if (timed) window.clearInterval(timed);
 }
