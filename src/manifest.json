@@ -4,7 +4,7 @@
   "description": "过滤掉 google 结果页的 链接转发，身在天朝伤不起啊",
   "manifest_version": 2,
   "content_scripts": [{
-    "js": [ "filter.min.js" ],
+    "js": [ "filter.js" ],
     "matches": [ 
       "*://www.google.com.hk/*", 
       "*://www.google.com/*", 
