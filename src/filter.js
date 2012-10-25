@@ -1,5 +1,5 @@
 var current_href = location.href,
-    selector = "#ires a.l";
+    selector = "#ires a.l, #ires .osl a";
 
 // CN 直接 跳转到 HK
 "http://www.google.cn/" === current_href && (location.href = "http://www.google.com.hk");
