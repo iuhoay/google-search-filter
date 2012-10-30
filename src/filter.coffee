@@ -21,4 +21,4 @@
   if current_href.indexOf("/search?") > 0
     filter()
   else
-    timeout = window.setInterval (filter timeout), 999
+    timeout = window.setInterval filter(timeout), 999
