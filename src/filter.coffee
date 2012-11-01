@@ -1,16 +1,13 @@
-current_href = location.href
-selector = "#ires"
-
-location.href = "https://www.google.com.hk" if "http://www.google.cn/" == current_href
+location.href = "https://www.google.com.hk" if "http://www.google.cn/" == location.href
 
 filter = ->
   box = document.getElementById "ires"
-  box.addEventListener "mouseover", ->
-    that = event.target
-    if that.tagName == "A" and that.onmousedown
-      that.removeAttribute 'onmousedown'
-      console.info "remove #{that.href}"
-      return
+  if box
+    links = box.querySelectorAll "a[onmousedown]"
+    for link in links
+      link.removeAttribute 'onmousedown'
+      console.info "#{_i + 1}/#{_len}:#{link.href}"
   return
 
-filter()
+# 不知道有个 DOMNodeInserted 之前干什么去了
+document.addEventListener "DOMNodeInserted", filter
