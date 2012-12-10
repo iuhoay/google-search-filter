@@ -4,3 +4,6 @@
 
 use Coffeescript  
 `coffee -c -o lib/ src/`
+
+[down](https://github.com/downloads/iuhoay/google-search-filter/google-search-filter.crx)
+下载后拖入 chrome://extensions/ 安装
