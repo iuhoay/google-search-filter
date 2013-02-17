@@ -9,7 +9,8 @@
       "*://www.google.com.hk/*", 
       "*://www.google.com/*", 
       "*://www.google.cn/*", 
-      "*://plus.google.com/*" 
+      "*://www.google.com.sg/*", 
+      "*://www.google.co.jp/*"
     ],
     "run_at": "document_end"
   }],
