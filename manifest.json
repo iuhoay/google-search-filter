@@ -1,15 +1,15 @@
 {
-  "name": "google search filter",
-  "version": "0.4",
-  "description": "过滤掉 google 结果页的 链接转发，身在天朝伤不起啊",
+  "name": "google search direct link",
+  "version": "0.4.1",
+  "description": "过滤掉 google 结果页的链接转发，身在天朝伤不起啊",
   "manifest_version": 2,
   "content_scripts": [{
     "js": [ "lib/filter.js" ],
-    "matches": [ 
-      "*://www.google.com.hk/*", 
-      "*://www.google.com/*", 
-      "*://www.google.cn/*", 
-      "*://www.google.com.sg/*", 
+    "matches": [
+      "*://www.google.com.hk/*",
+      "*://www.google.com/*",
+      "*://www.google.cn/*",
+      "*://www.google.com.sg/*",
       "*://www.google.co.jp/*"
     ],
     "run_at": "document_end"
