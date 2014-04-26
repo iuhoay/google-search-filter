@@ -1,12 +1,15 @@
 location.href = "https://www.google.com.hk" if "http://www.google.cn/" == location.href
 
 filter = ->
-  box = document.getElementById "ires"
+  box = document.getElementById "rso"
   if box
-    links = box.querySelectorAll "a[onmousedown]"
+    links = box.querySelectorAll ".r a[onmousedown]"
     for link in links
       link.removeAttribute 'onmousedown'
       console.info "#{_i + 1}/#{_len}:#{link.href}"
+      link.onmousedown = (e) ->
+        window.open(this.attributes["data-href"].value)
+        return false
   return
 
 # 不知道有个 DOMNodeInserted 之前干什么去了
