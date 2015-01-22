@@ -1,6 +1,6 @@
 {
   "name": "google search direct link",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "过滤掉 google 结果页的链接转发，身在天朝伤不起啊",
   "manifest_version": 2,
   "content_scripts": [{
