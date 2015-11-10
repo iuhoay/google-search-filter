@@ -4,9 +4,9 @@ filter = ->
   box = document.getElementById "rso"
   if box
     links = box.querySelectorAll ".r a[onmousedown]"
-    for link in links
+    for link, i in links
       link.removeAttribute 'onmousedown'
-      console.info "#{_i + 1}/#{_len}:#{link.href}"
+      console.info "#{i + 1}/#{links.length}:#{link.href}"
       link.onmousedown = (e) ->
         this.href = this.attributes["data-href"].value
   return
